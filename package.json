@@ -7,18 +7,22 @@
 		"ios": "react-native run-ios",
 		"start": "react-native start",
 		"test": "jest",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"build": "yarn tsc"
 	},
-	"dependencies": {
+	"peerDependencies": {
+		"react": "*",
+		"react-native": ">= 0.46",
+		"@react-native-community/async-storage": "^1.6.2"
+	},
+	"devDependencies": {
 		"@types/jest": "^24.0.20",
 		"@types/react": "^16.9.11",
 		"@types/react-native": "^0.60.21",
 		"@types/react-test-renderer": "^16.9.1",
 		"react": "16.9.0",
 		"react-native": "0.61.2",
-		"typescript": "^3.6.4"
-	},
-	"devDependencies": {
+		"typescript": "^3.6.4",
 		"@babel/core": "^7.6.4",
 		"@babel/runtime": "^7.6.3",
 		"@react-native-community/eslint-config": "^0.0.5",
@@ -30,5 +34,7 @@
 	},
 	"jest": {
 		"preset": "react-native"
-	}
+	},
+	"main": "dist/index.js",
+  	"typings": "dist/index.d.ts"
 }
